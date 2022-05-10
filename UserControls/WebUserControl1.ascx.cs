@@ -18,13 +18,13 @@ namespace WebApplication3
                 }
             }
 
-            protected void Button1_Click(object sender, EventArgs e)
+            public void Button1_Click(object sender, EventArgs e)
             {
                 int ClicksCount = Convert.ToInt32(TextBox1.Text) + 1;
                 TextBox1.Text = ClicksCount.ToString();
             }
 
-            protected void Button2_Click(object sender, EventArgs e)
+            public void Button2_Click(object sender, EventArgs e)
             {
                 int ClicksCount = Convert.ToInt32(TextBox1.Text) - 1;
                 TextBox1.Text = ClicksCount.ToString();

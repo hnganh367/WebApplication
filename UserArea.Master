@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserArea.Master.cs" Inherits="WebApplication3.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table>
+                <tr>
+                    <td>
+                        <asp:ImageButton Width="20px" href="NestedMasterPage1.master" ID="ImageButton1" runat="server" ImageUrl="~/Images/home.png" /></td>
+                    <td style="font-weight:bolder;background-color: lightsteelblue; width: 1000px; text-align: center;">FPT Software Academy - Community Web Site</td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="font-weight:bolder; text-align:center; background-color:orange; width:1000px;">User Area</td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:Menu ID="Menu1" runat="server">
+                            <StaticMenuStyle Width="100px" BackColor="#ffcc66" />
+                            <Items>
+                            <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Courses" Value="About" NavigateUrl="~/About.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Calendar" Value="Contacts" NavigateUrl="~/Contacts.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Recourses" Value="Contacts" NavigateUrl="~/Contacts.aspx"></asp:MenuItem>                                
+                            </Items>
+                        </asp:Menu>
+                    </td>
+                    <td style="text-align:match-parent; height:100px;">Welcome to the users area...</td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="background-color:lightsteelblue; width:1000px;text-align:center;">(c) 2013 - FPT Software Academy</td>
+                </tr>
+            </table>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

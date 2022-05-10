@@ -6,6 +6,4 @@
                         ErrorMessage="Only numbers allowed"
                         ValidationExpression="\d+">
 </asp:RegularExpressionValidator>
-            <asp:Button ID="Button1" runat="server" style="width: 24px" Text="+"  OnClick="Button1_Click"  />
-&nbsp;<asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="-" />
-            changed</div>
+&nbsp;changed</div>

@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Excerise1.Master.cs" Inherits="WebApplication3.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <style type="text/css">
+        .auto-style1 {
+            height: 30px;
+            width: 199px;
+        }
+        .auto-style2 {
+            height: 200px;
+            width: 199px;
+        }
+        .auto-style3 {
+            width: 199px;
+        }
+        .auto-style4 {
+            height: 30px;
+        }
+        .auto-style5 {
+            margin-right: 0px;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table style="font-family: Arial; border:none;">
+            <tr>
+                <td colspan="2" style="width: 1000px; height: 20px; text-align: center; background-color: #BDBDBD;">
+                    <h1>I am the Master Header!
+                    </h1>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:left; font:bolder; background-color:lightgreen; color:darkgreen;" class="auto-style1" >Menu</td>
+                <td class="auto-style4"></td>
+            </tr>
+            <tr>
+                <td style="background-color: lightgreen; margin:0 auto; " class="auto-style2">
+                    <asp:Menu ID="Menu1" runat="server" StaticDisplayLevels="2" CssClass="auto-style5">
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="About" Value="About" NavigateUrl="~/About.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Contacts" Value="Contacts" NavigateUrl="~/Contacts.aspx">
+                            <asp:MenuItem Text="India" Value="India" NavigateUrl="~/India.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Bulgaria" Value="Bulgaria" NavigateUrl="~/Bulgaria.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+                <td style="height: 200px; background-color: white; width: 850px">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        <h1>Section that changes on a page by page basis</h1>
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3"></td>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="background-color: #BDBDBD; text-align: center">
+                    (c) 2011 by Yola Corp</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

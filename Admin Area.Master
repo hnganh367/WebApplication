@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin Area.master.cs" Inherits="WebApplication3.Admin_Area" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table border="0">
+                <tr>
+                    <td style="background-color: lightsteelblue;">
+                        <asp:ImageButton Width="20px" href="NestedMasterPage1.master" ID="ImageButton1" runat="server" ImageUrl="~/Images/home.png" /></td>
+                    <td style="font-weight: bolder; background-color: lightsteelblue; width: 1000px; text-align: center;">FPT Software Academy - Community Web Site</td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="font-weight: bolder; text-align: center; background-color:crimson; width: 1000px;">Admin Area</td>
+                </tr>
+                </table>
+            <table>
+                <tr>
+                    <td style="text-align: match-parent; width:800px; height: 100px;">Welcome to administration area...</td>
+                    <td style="width:200px;">
+                        <asp:Menu ID="Menu1" runat="server" BorderWidth="12px" BorderColor="#FFCC66">
+                            <StaticMenuStyle Width="195px" BackColor="#ffcc66" BorderColor="#FFCC66" />
+                            <Items>
+                                <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="User Management" Value="About" NavigateUrl="~/About.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Course Management" Value="Contacts" NavigateUrl="~/Contacts.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Homework Management" Value="Contacts" NavigateUrl="~/Contacts.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Calendar Management" Value="Contacts" NavigateUrl="~/Contacts.aspx"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="2" style="background-color: lightsteelblue; width: 1000px; text-align: center;">(c) 2013 - FPT Software Academy</td>
+                </tr>
+            </table>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
